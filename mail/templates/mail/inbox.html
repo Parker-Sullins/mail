@@ -12,10 +12,20 @@
 
     <hr>
 
+    <div id="reply-view"></div>
+
     <div id="emails-view">
     </div>
 
     <div id="display-email">
+       <span class="email-info"> <p class="email-instance border border-light">From: </p></span>
+       <span class="email-info"> <p class="border border-light">To: </p></span>
+       <span class="email-info"> <p class="border border-light">Subject: </p></span>
+       <span class="email-info"> <p class="border border-light">Date: </p></span>
+       <p class="border border-dark"></p>
+
+       <button id="archive-btn" type="button" class="btn btn-outline-dark "></button>
+       <button id="reply-btn" type="button" class="btn btn-outline-light btn-success ">Reply Button</button>
     </div>
 
     <div id="compose-view">
@@ -28,10 +38,13 @@
                 To: <input id="compose-recipients" class="form-control">
             </div>
             <div class="form-group">
-                <input class="form-control" id="compose-subject" placeholder="Subject">
+                Subject: <input class="form-control" id="compose-subject" placeholder="Subject">
             </div>
-            <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
-            <input type="submit" class="btn btn-primary"/>
+            <div>
+                <aside id="reply-container"></aside>
+                <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
+            </div>
+                <input type="submit" class="btn btn-primary"/>
         </form>
     </div>
 {% endblock %}
